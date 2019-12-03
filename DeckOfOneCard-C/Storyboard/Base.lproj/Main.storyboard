@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CardViewController" customModule="DeckOfOneCard_C" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="ZeN-Lr-xGt">
+                                <rect key="frame" x="87" y="163" width="240" height="624"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfX-hz-pOD">
+                                        <rect key="frame" x="95" y="0.0" width="50.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhA-34-2cT">
+                                        <rect key="frame" x="96" y="72" width="48" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="BHX-CA-KnQ">
+                                        <rect key="frame" x="5.5" y="132" width="229" height="325.5"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gV-9b-eNU">
+                                        <rect key="frame" x="52" y="493.5" width="136" height="130.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Draw New Card"/>
+                                        <connections>
+                                            <action selector="drawCardButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="noY-e6-Zx3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZeN-Lr-xGt" secondAttribute="trailing" constant="87" id="05b-ka-Ley"/>
+                            <constraint firstItem="ZeN-Lr-xGt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="119" id="98L-b1-UCH"/>
+                            <constraint firstItem="ZeN-Lr-xGt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="M5v-FB-bvI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZeN-Lr-xGt" secondAttribute="bottom" constant="75" id="wg3-aH-1Ac"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="BHX-CA-KnQ" id="ROg-rs-iTq"/>
+                        <outlet property="drawNewCardButton" destination="0gV-9b-eNU" id="Qnj-Gl-fOf"/>
+                        <outlet property="suitCardLabel" destination="wfX-hz-pOD" id="qXo-hc-dlb"/>
+                        <outlet property="valueCardLabel" destination="PhA-34-2cT" id="iR4-jc-ROQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cardBack" width="228.66667175292969" height="325.33334350585938"/>
+    </resources>
+</document>
